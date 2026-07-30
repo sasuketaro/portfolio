@@ -37,6 +37,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 20px 32px;
+  background: var(--bg);
 }
 
 .header-left {
@@ -63,6 +64,8 @@ body {
 .nav-arrow {
   font-size: 2rem;
   line-height: 1;
+  text-decoration: none;
+  color: var(--text);
 }
 
 /* ===== Side Nav ===== */
@@ -247,6 +250,98 @@ body {
   letter-spacing: 0.05em;
 }
 
+/* ===== Works ===== */
+.works {
+  padding: 96px 80px;
+  border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+}
+
+.work-card {
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.25);
+}
+
+.work-card-inner {
+  padding: 48px 56px;
+}
+
+.work-num {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.work-name {
+  font-size: 1.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 20px;
+}
+
+.work-desc {
+  line-height: 2;
+  margin-bottom: 24px;
+  max-width: 640px;
+}
+
+.work-features {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.work-features li {
+  position: relative;
+  padding-left: 20px;
+  line-height: 2;
+}
+
+.work-features li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+.work-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.tech-tag {
+  display: inline-block;
+  padding: 4px 16px;
+  border: 1px solid var(--text);
+  font-size: 0.75rem;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+}
+
+.work-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 2px solid var(--yellow);
+  transition: border-color 0.2s;
+}
+
+.work-link:hover {
+  border-bottom-color: var(--text);
+}
+
 /* ===== Footer ===== */
 .site-footer {
   background: var(--footer-bg);
@@ -310,6 +405,18 @@ body {
 
   .section-title {
     font-size: 2rem;
+  }
+
+  .works {
+    padding: 64px 24px;
+  }
+
+  .work-card-inner {
+    padding: 32px 24px;
+  }
+
+  .work-name {
+    font-size: 1.4rem;
   }
 
   .site-footer {
