@@ -32,7 +32,7 @@
 </script>
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="top">
 
 <header class="site-header">
   <div class="header-left">
@@ -40,12 +40,12 @@
     <span class="header-label">SOFTWARE ENGINEER &nbsp; SASUKETARO</span>
   </div>
   <nav class="header-nav">
-    <span class="nav-arrow">&#x2303;</span>
+    <a href="#top" class="nav-arrow" aria-label="ページ上部へ戻る">&#x2303;</a>
   </nav>
 </header>
 
 <nav class="side-nav">
-  <a href="#about" class="side-nav-item">
+  <a href="#top" class="side-nav-item">
     <span class="side-nav-en">HOME</span>
   </a>
   <a href="#about" class="side-nav-item">
@@ -53,13 +53,18 @@
     <span class="side-nav-line"></span>
     <span class="side-nav-ja">自己紹介</span>
   </a>
+  <a href="#works" class="side-nav-item">
+    <span class="side-nav-en">WORKS</span>
+    <span class="side-nav-line"></span>
+    <span class="side-nav-ja">作品</span>
+  </a>
   <a href="https://github.com/sasuketaro" target="_blank" rel="noopener noreferrer" class="side-nav-item side-nav-btn">
     GitHub
   </a>
 </nav>
 
 <main>
-  <section id="about" class="hero">
+  <section class="hero">
     <div class="hero-deco">
       <svg class="deco-circle" viewBox="0 0 320 320" aria-hidden="true">
         <ellipse cx="160" cy="160" rx="140" ry="150" fill="none" stroke="var(--yellow)" stroke-width="28" stroke-linecap="round" stroke-dasharray="600 100" transform="rotate(-15 160 160)"/>
@@ -89,7 +94,7 @@
     </div>
   </section>
 
-  <section id="principle" class="principle">
+  <section id="about" class="principle">
     <div class="section-header">
       <h2 class="section-title">ABOUT</h2>
       <span class="section-ja">自己紹介</span>
@@ -106,6 +111,34 @@
           sasuketaro
         </p>
       </div>
+    </div>
+  </section>
+
+  <section id="works" class="works">
+    <div class="section-header">
+      <h2 class="section-title">WORKS</h2>
+      <span class="section-ja">作品</span>
+    </div>
+    <div class="works-grid">
+      <article class="work-card">
+        <div class="work-card-inner">
+          <span class="work-num">01</span>
+          <h3 class="work-name">Mac Shortcuts</h3>
+          <p class="work-desc">アクティブなアプリを自動検出し、そのアプリのキーボードショートカットを画面右端にリアルタイム表示するmacOSアプリ。ウィンドウの自動整列機能も搭載し、作業スペースを効率的に活用できる。</p>
+          <ul class="work-features">
+            <li>アプリ切替を検出し、ショートカット一覧を即座に切替</li>
+            <li>ウィンドウ自動整列（アプリ: 左3/4 / 本アプリ: 右1/4）</li>
+            <li>Safari, Chrome, VS Code, Xcode など主要アプリに対応</li>
+          </ul>
+          <div class="work-tech">
+            <span class="tech-tag">Swift</span>
+            <span class="tech-tag">SwiftUI</span>
+            <span class="tech-tag">AppKit</span>
+            <span class="tech-tag">Accessibility API</span>
+          </div>
+          <a href="https://github.com/sasuketaro/mac-shortcuts" target="_blank" rel="noopener noreferrer" class="work-link">VIEW ON GITHUB &rarr;</a>
+        </div>
+      </article>
     </div>
   </section>
 </main>
