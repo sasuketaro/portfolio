@@ -287,6 +287,11 @@ body {
   object-position: center 55%;
 }
 
+/* 見せたいものが絵の右側にあるとき（切り取られても右端を残す） */
+.work-hero--right img {
+  object-position: right center;
+}
+
 /* 絵の下のほうを暗くして、白い文字を読みやすくする */
 .work-hero-caption {
   position: absolute;
@@ -382,6 +387,23 @@ body {
 
 .work-link:hover {
   border-bottom-color: var(--text);
+}
+
+/* スマホ・タブレットで見たときだけ出す注意書き */
+.work-note {
+  display: none;
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-left: 3px solid var(--yellow);
+  background: rgba(255,255,255,0.4);
+  font-size: 0.85rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 900px), (hover: none) and (pointer: coarse) {
+  .work-note {
+    display: block;
+  }
 }
 
 /* ===== Footer ===== */
